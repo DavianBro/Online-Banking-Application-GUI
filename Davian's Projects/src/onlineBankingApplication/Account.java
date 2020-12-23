@@ -18,7 +18,6 @@ public class Account extends Transaction {
 	Account(){
 		//Default Constructor
 	}
-
 	public Account(String accountUsername, double checkingsAccount, double savingsAccount) {
 		super();
 		AccountUsername = accountUsername;
