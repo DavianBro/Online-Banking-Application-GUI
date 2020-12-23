@@ -24,8 +24,8 @@ public class Account extends Transaction {
 		this.checkingsAccount = checkingsAccount;
 		this.savingsAccount = savingsAccount;
 	}
-
-
+	
+	
 public double getUserAccountcheckingsAccount(double balance) {
 double Checkings;
 Checkings = .8 * balance ;
