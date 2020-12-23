@@ -83,25 +83,13 @@ public class Transaction {
 	public String toString() {
 	return (String.format("%-15s%-10s%15s%25s", Bankmethods.Formatter(amount), timestamp, TransactionType,  Accounttype ));
 			
-			//"Transaction [amount=" + amount + ", timestamp=" + timestamp + ", TransactionType=" + TransactionType
-			//	+ ", Accounttype=" + Accounttype + "]";
-		
-		// Format 
+			
 	}
 
 
 
 	
-	// To String 
-
-
-	
-	
-	
-	// There is an Account that owns this transaction
-	
-	// Use this class to print out a receipt once user logs out
-	// Use this class to record Transactions 
+	 
 
 	
 	
