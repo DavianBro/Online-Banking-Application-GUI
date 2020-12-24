@@ -866,7 +866,7 @@ public class ATMGUI implements ActionListener {
 		CustomerSignup.add(CreateInitialDepositText);
 		
 		JButton SubmitApplicationButton = new JButton("Create Account"); // Create Account Button
-		SubmitApplicationButton.setBounds(60,420,250,25); 
+		SubmitApplicationButton.setBounds(60,400,250,25); 
 		SubmitApplicationButton.setBackground(Color.BLUE); 
 		SubmitApplicationButton.setOpaque(true); 
 		SubmitApplicationButton.setForeground(Color.WHITE);
@@ -991,14 +991,14 @@ public class ATMGUI implements ActionListener {
 	
 	            }
 	            else { // If User Inputs Exception or Wrong Information This Will Run
-	            	WrongInfo.setBounds(10,445,460,25); 
+	            	WrongInfo.setBounds(10,425,460,25); 
 	        		WrongInfo.setText(" Error! Please Check Username, Email Address, Deposit, & Phone Number "); 
 	        		WrongInfo.setForeground(Color.RED);
 	        		WrongInfo.setFont(new Font("Arial",Font.ITALIC, 12));
 	        		CustomerSignup.revalidate(); // Allows Panel to Update 
 	        		CustomerSignup.repaint();
 	        		CustomerSignup.add(WrongInfo);
-	        		
+	        	
 	            }
 	      };
 	
