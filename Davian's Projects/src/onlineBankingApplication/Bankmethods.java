@@ -23,7 +23,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
-
+///
 public class Bankmethods{
 	
 	public static String [] options = { "Savings ", "Checkings" };
