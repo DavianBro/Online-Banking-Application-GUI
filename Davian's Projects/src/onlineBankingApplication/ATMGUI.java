@@ -998,7 +998,7 @@ public class ATMGUI implements ActionListener {
 	        		CustomerSignup.revalidate(); // Allows Panel to Update 
 	        		CustomerSignup.repaint();
 	        		CustomerSignup.add(WrongInfo);
-	        	
+	        	//
 	            }
 	      };
 	
