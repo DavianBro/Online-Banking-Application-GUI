@@ -24,7 +24,6 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
 
-
 public class Bankmethods{
 	
 	public static String [] options = { "Savings ", "Checkings" };
@@ -36,8 +35,8 @@ public class Bankmethods{
 		Formatters.format(Account); // Formats input 
 		return Formatters.format(Account);
 	}
-	
-										// Frame 		// UserScreenMenu   // CheckBalance Screen or whatever Screen Engineering 
+
+								// Frame 		// UserScreenMenu   // CheckBalance Screen or whatever Screen Engineering 
 	public static void ReturnToMainPage (JFrame frames,JPanel Addin, JPanel Panels, int a, int b, int c, int d) {
 		// Method Returns User To The User Options Screen
 		JButton GoBack = new JButton (" < Go Back "); // Creates Button
