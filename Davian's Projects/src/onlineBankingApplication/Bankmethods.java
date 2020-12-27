@@ -78,7 +78,8 @@ public static void TransferReceipt(JFrame frames,  JPanel Option, String Name, S
 	JPanel Receipt = new JPanel();
 	ATMGUI.ClearScreen(Receipt);
 	frames.setSize(500,330); // 340
-	JLabel SuccessfulTrans = new JLabel("<html>ONE AMERICA BANK SUCCESSFUL TRANSFER RECEIPT<br/> ------------------------------------------- </html>", SwingConstants.CENTER);
+	JLabel SuccessfulTrans = new JLabel("<html>ONE AMERICA BANK SUCCESSFUL TRANSFER RECEIPT<br/> -------------------------------------------------"
+			+ " </html>", SwingConstants.CENTER);
 
 	SuccessfulTrans.setFont(new Font(" monaco ", Font.ITALIC,15));
 	SuccessfulTrans.setBounds(10,5,500,45);
