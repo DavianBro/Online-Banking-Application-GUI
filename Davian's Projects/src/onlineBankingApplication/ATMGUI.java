@@ -129,16 +129,14 @@ public class ATMGUI implements ActionListener {
 			 
 			 if(Elementfound) { // If User is Found 
 				 JPanel UserOptionsScreen = new JPanel(); 
-				// UserOptionsScreen.revalidate(); 
-				 //UserOptionsScreen.repaint();
-				 frame.revalidate();
+				 UserOptionsScreen.revalidate();
+				 UserOptionsScreen.repaint();
 				 frame.repaint();
 				 ClearScreen(UserOptionsScreen); // This Method allows for a clear screen transition to Options Menu 
 				 frame.setSize(900,500); // Set's Size of Option Menu Screen
 				 LoginError.setText("");
 				 transactions.clear();
 				 final int z = x; // this allows to use in other methods, declared it final so it wont change possibly change back 
-				 
 				 
 				 UpdatedCheckingBalance = Userarraylist.get(x).getcheckingsAccountBalance(); // Sets User Object Balance to Checking
 				 UpdatedSavingsBalance = Userarraylist.get(x).getsavingsAccountBalance(); // Sets User Object Balance to Saving
@@ -284,9 +282,6 @@ public class ATMGUI implements ActionListener {
 						NoSign.setForeground(Color.RED);
 						JOptionPane.showMessageDialog(frame, NoSign
 								, "One America Bank Online Banking",JOptionPane.DEFAULT_OPTION);
-						
-
-						
 					}
 					
 						}
@@ -567,7 +562,6 @@ public class ATMGUI implements ActionListener {
 							Rejection.setForeground(Color.RED);
 							JOptionPane.showMessageDialog(frame, Rejection
 									, "One America Bank Online Banking",JOptionPane.DEFAULT_OPTION);
-							
 							}
 					}
 					
@@ -578,9 +572,7 @@ public class ATMGUI implements ActionListener {
 				}
 
 			});
-			
-			
-		
+
 			JButton CheckBalance = new JButton(" Check Balance "); // This Puts Button on Screen for User to check balance
 			CheckBalance.setBounds(45,250,240,25);
 			CheckBalance.setForeground(Color.BLUE); 
@@ -596,8 +588,7 @@ public class ATMGUI implements ActionListener {
 					frame.setSize(600,300); //500
 					
 					BankLogoMethod(CheckBalanceScreen,80,20,500,45); 
-				
-					
+
 					JLabel UserCheckBalanceScreenWelcome = new JLabel(); // Account Statement name 
 					UserCheckBalanceScreenWelcome.setText(Userarraylist.get(z).getFirstName() + "'s " + " Account Balance As Of: " + Time);
 					UserCheckBalanceScreenWelcome.setFont(new Font("Calabri",  Font.ITALIC,14)); // fix up font
@@ -646,8 +637,7 @@ public class ATMGUI implements ActionListener {
 			ClearScreen(TransactionHistoryScreen);
 			frame.setSize(630,265);// was 290
 			BankLogoMethod(TransactionHistoryScreen,100,20,500,45);
-			
-			
+
 			JLabel Welcomes = new JLabel();
 			Welcomes.setText(Userarraylist.get(z).getFirstName() + "'s" + " Previous Transaction Since Last Login " + Time);
 			Welcomes.setFont(new Font(" monaco ", Font.ITALIC,12));
@@ -670,7 +660,6 @@ public class ATMGUI implements ActionListener {
 				Dashes.setBounds(75,75,500,45);
 				TransactionHistoryScreen.add(Dashes);
 			
-				
 				JLabel header = new JLabel();
 				header.setFont(new Font(" monaco ", Font.BOLD,15));
 				String headers = String.format("%-15s%-10s%25s%15s",  "AMOUNT", "DATE", "TRANSACTION", "ACCOUNT");
@@ -759,13 +748,11 @@ public class ATMGUI implements ActionListener {
 		 * Page has to Be a bit bigger due to it's taking input 
 		 * This method should also have some stuff like to take in UserName and Password 
 		 */
-		
 		JPanel CustomerSignup = new JPanel(); // This Created Panel for GUI
 		ClearScreen(CustomerSignup);
 		CustomerSignup.setBackground(Color.WHITE); // Consider removing and going back to original color?
      	frame.setSize(430,520); // This set a new size for 
-    	
-  
+
 		// Moved This to the Top of the code 
 		BanklogoONE.setFont(new Font("CALABRI",Font.ITALIC,37)); 
 		 BanklogoONE.setForeground(Color.BLUE);
@@ -919,10 +906,8 @@ public class ATMGUI implements ActionListener {
 	   double InitialDepositminimumvalue = 0;
 	   if (UserConfirmEmailAddress.matches(UserEmailAddress) && UserConfirmEmailAddress.contains("@") &&
 	       UserConfirmEmailAddress.contains (".com") && UserInitialDeposit > InitialDepositminimumvalue && UserPhonenumber.length() >= 10 
-	       && UsernameValid && Deposit) { // If statement that checks parameters for Customer signup
-	            	
-	            	// No numbers in name
-	            
+	       && UsernameValid && Deposit) { // If statement that checks parameters for Customer signup 	   	// No numbers in name
+
 	         int UserPersonalNum = 254678219 + (int)(Math.random() * 98653219); // User Personal Number
 	         final String User_Personal_Number = Integer.toString (UserPersonalNum); // User Personal Number
 	            	
@@ -976,8 +961,7 @@ public class ATMGUI implements ActionListener {
 	        	GoLogin.setForeground(Color.WHITE);
 	        	GoLogin.setBorderPainted(false);
 	        	SuccessfulAccountCreation.add(GoLogin);
-	        	
-	        	
+	
 	        	GoLogin.addActionListener(new ActionListener() {
 
 					@Override
@@ -998,7 +982,6 @@ public class ATMGUI implements ActionListener {
 	        		CustomerSignup.revalidate(); // Allows Panel to Update 
 	        		CustomerSignup.repaint();
 	        		CustomerSignup.add(WrongInfo);
-
 	            }
 	      };
 	
