@@ -129,8 +129,8 @@ public class ATMGUI implements ActionListener {
 			 
 			 if(Elementfound) { // If User is Found 
 				 JPanel UserOptionsScreen = new JPanel(); 
-				 UserOptionsScreen.revalidate(); 
-				 UserOptionsScreen.repaint();
+				// UserOptionsScreen.revalidate(); 
+				 //UserOptionsScreen.repaint();
 				 frame.revalidate();
 				 frame.repaint();
 				 ClearScreen(UserOptionsScreen); // This Method allows for a clear screen transition to Options Menu 
