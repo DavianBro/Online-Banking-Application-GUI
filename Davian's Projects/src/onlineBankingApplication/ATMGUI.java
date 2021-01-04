@@ -51,7 +51,7 @@ public class ATMGUI implements ActionListener {
 		
 	}
 	
-	public static void BankLogoMethod(JPanel PanelMethod, int a, int b,int c, int d ) { // Sets Bank Logo Header 
+	public static void bankLogoMethod(JPanel PanelMethod, int a, int b,int c, int d ) { // Sets Bank Logo Header 
 		BanklogoONE.setFont(new Font("CALABRI",Font.ITALIC,45)); // Sets Bank Logo On Top 
         BanklogoONE.setForeground(Color.BLUE);
         BanklogoONE.setBounds(a,b,c,d); 
@@ -59,7 +59,7 @@ public class ATMGUI implements ActionListener {
 
 	}
 	
-	public static void ClearScreen(JPanel PanelMethod) { // This method clears the screen
+	public static void clearScreen(JPanel PanelMethod) { // This method clears the screen
 		frame.getContentPane().removeAll();
 		frame.getContentPane().add((PanelMethod));
         frame.revalidate();
@@ -132,7 +132,7 @@ public class ATMGUI implements ActionListener {
 				 UserOptionsScreen.revalidate();
 				 UserOptionsScreen.repaint();
 				 frame.repaint();
-				 ClearScreen(UserOptionsScreen); // This Method allows for a clear screen transition to Options Menu 
+				 clearScreen(UserOptionsScreen); // This Method allows for a clear screen transition to Options Menu 
 				 frame.setSize(900,500); // Set's Size of Option Menu Screen
 				 LoginError.setText("");
 				 transactions.clear();
@@ -141,7 +141,7 @@ public class ATMGUI implements ActionListener {
 				 UpdatedCheckingBalance = Userarraylist.get(x).getcheckingsAccountBalance(); // Sets User Object Balance to Checking
 				 UpdatedSavingsBalance = Userarraylist.get(x).getsavingsAccountBalance(); // Sets User Object Balance to Saving
 	          
-		        BankLogoMethod(UserOptionsScreen,200,20,500,45); // Adds Bank Logo on top
+		        bankLogoMethod(UserOptionsScreen,200,20,500,45); // Adds Bank Logo on top
 		        
 				JLabel dateFormat = new JLabel(); // This Label Puts the Time at the bottom of the code on Options Menu
 				dateFormat.setText( Userarraylist.get(x).getFirstName() + "'s " + " Last Login: " + Time);// This is printing same name 
@@ -175,9 +175,9 @@ public class ATMGUI implements ActionListener {
 					// TODO Auto-generated method stub
 					// Method is the Screen User Sees to Withdraw and enter in input
 					JPanel WithdrawScreen = new JPanel(); 
-					ClearScreen(WithdrawScreen);
+					clearScreen(WithdrawScreen);
 					frame.setSize(550,280);
-					BankLogoMethod(WithdrawScreen, 50,20,500,45);
+					bankLogoMethod(WithdrawScreen, 50,20,500,45);
 			
 					JLabel UserAccountNumber = new JLabel(); // puts account# on screen 
 					UserAccountNumber.setText(" Account #" + Userarraylist.get(z).getPersonalID()); // Displays Account Number
@@ -198,7 +198,7 @@ public class ATMGUI implements ActionListener {
 					WithDrawinput.setBounds(265,92,165,25);
 					WithdrawScreen.add(WithDrawinput);
 					
-					Bankmethods.ReturnToMainPage(frame,UserOptionsScreen,WithdrawScreen,40,200, 145, 45); // Puts Back Button Screen 
+					Bankmethods.returnToMainPage(frame,UserOptionsScreen,WithdrawScreen,40,200, 145, 45); // Puts Back Button Screen 
 					JButton WithdrawButton = new JButton();
 					WithdrawButton.setText(" Withdraw Funds");
 					WithdrawButton.setFont(new Font("Open Sans", Font.BOLD,13));
@@ -305,9 +305,9 @@ public class ATMGUI implements ActionListener {
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 					JPanel DepositScreen = new JPanel(); 
-					ClearScreen(DepositScreen);
+					clearScreen(DepositScreen);
 					frame.setSize(550,280);
-					BankLogoMethod(DepositScreen, 50,20,500,45);
+					bankLogoMethod(DepositScreen, 50,20,500,45);
 					
 					JLabel DepositUserAccountNumber = new JLabel(); // puts account# on screen 
 					DepositUserAccountNumber.setText(" Account #" + Userarraylist.get(z).getPersonalID()); // Displays Account Number
@@ -326,7 +326,7 @@ public class ATMGUI implements ActionListener {
 					Depositinput.setBounds(265,92,165,25);
 					DepositScreen.add(Depositinput);
 					
-					Bankmethods.ReturnToMainPage(frame,UserOptionsScreen,DepositScreen,40,200, 145, 45); // Puts Back Button Screen 
+					Bankmethods.returnToMainPage(frame,UserOptionsScreen,DepositScreen,40,200, 145, 45); // Puts Back Button Screen 
 					JButton DepositButton = new JButton();
 					DepositButton.setText(" Deposit Funds");
 					DepositButton.setFont(new Font("Open Sans", Font.BOLD,13));
@@ -413,9 +413,9 @@ public class ATMGUI implements ActionListener {
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 					JPanel TransferFundsPanel = new JPanel();
-					ClearScreen(TransferFundsPanel);
+					clearScreen(TransferFundsPanel);
 					frame.setSize(500,340);
-					BankLogoMethod(TransferFundsPanel,10,20,500,45);
+					bankLogoMethod(TransferFundsPanel,10,20,500,45);
 					
 					JLabel RecipientName = new JLabel(" Enter Recipient's Name "); // User enters Desired Recipient
 					RecipientName .setBounds(5,70,300,25); 
@@ -471,7 +471,7 @@ public class ATMGUI implements ActionListener {
 				    AccountList.setVisible(true);
 				    AccountList.setBounds(220,190,200,25);
 				    TransferFundsPanel.add(AccountList);
-				Bankmethods.ReturnToMainPage(frame, UserOptionsScreen,TransferFundsPanel, 5, 250 ,145, 45);
+				Bankmethods.returnToMainPage(frame, UserOptionsScreen,TransferFundsPanel, 5, 250 ,145, 45);
 					
 				
 				JButton TransferFundsButton = new JButton("Transfer Funds!");
@@ -518,7 +518,7 @@ public class ATMGUI implements ActionListener {
 							if(UserConfirm == 0 && TransferAmount<= UpdatedSavingsBalance) { // Another Nested IF 
 								UpdatedSavingsBalance = UpdatedSavingsBalance - TransferAmount;
 								transactions.add(new Transaction(TransferAmount, Time, " Transfer", " Savings")); //Record Transaction
-								Bankmethods.TransferReceipt(frame, UserOptionsScreen, RecipientName, BankName, RecRoutingNumber, TransferAmount, "Savings");
+								Bankmethods.transferReceipt(frame, UserOptionsScreen, RecipientName, BankName, RecRoutingNumber, TransferAmount, "Savings");
 
 							}
 							else if (TransferAmount > UpdatedSavingsBalance ) { // THis code will run if User has insufficient funds or entered 0
@@ -540,7 +540,7 @@ public class ATMGUI implements ActionListener {
 							 if(UserConfirm1 == 0 && TransferAmount<= UpdatedCheckingBalance) {
 								 	UpdatedCheckingBalance = UpdatedCheckingBalance - TransferAmount;
 									transactions.add(new Transaction(TransferAmount, Time, " Transfer", " Checkings")); //Record Transaction
-									Bankmethods.TransferReceipt(frame,UserOptionsScreen, RecipientName, BankName, RecRoutingNumber, TransferAmount, "Checkings");
+									Bankmethods.transferReceipt(frame,UserOptionsScreen, RecipientName, BankName, RecRoutingNumber, TransferAmount, "Checkings");
 									
 									
 							 }
@@ -584,10 +584,10 @@ public class ATMGUI implements ActionListener {
 				public void actionPerformed(ActionEvent e) { // Method When User Clicks Check Balance 
 					// TODO Auto-generated method stub
 					JPanel CheckBalanceScreen = new JPanel();
-					ClearScreen(CheckBalanceScreen);
+					clearScreen(CheckBalanceScreen);
 					frame.setSize(600,300); //500
 					
-					BankLogoMethod(CheckBalanceScreen,80,20,500,45); 
+					bankLogoMethod(CheckBalanceScreen,80,20,500,45); 
 
 					JLabel UserCheckBalanceScreenWelcome = new JLabel(); // Account Statement name 
 					UserCheckBalanceScreenWelcome.setText(Userarraylist.get(z).getFirstName() + "'s " + " Account Balance As Of: " + Time);
@@ -616,7 +616,7 @@ public class ATMGUI implements ActionListener {
 					SavingsDisplay.setForeground(Color.BLACK);
 					SavingsDisplay.setBounds(190,135,500,45);
 					CheckBalanceScreen.add(SavingsDisplay);
-					Bankmethods.ReturnToMainPage(frame,UserOptionsScreen, CheckBalanceScreen, 25, 220, 145, 45 ); // Return to User Options Screen  
+					Bankmethods.returnToMainPage(frame,UserOptionsScreen, CheckBalanceScreen, 25, 220, 145, 45 ); // Return to User Options Screen  
 	
 				}
 
@@ -634,9 +634,9 @@ public class ATMGUI implements ActionListener {
 					// TODO Auto-generated method stub
 				
 			JPanel TransactionHistoryScreen = new JPanel();
-			ClearScreen(TransactionHistoryScreen);
+			clearScreen(TransactionHistoryScreen);
 			frame.setSize(630,265);// was 290
-			BankLogoMethod(TransactionHistoryScreen,100,20,500,45);
+			bankLogoMethod(TransactionHistoryScreen,100,20,500,45);
 
 			JLabel Welcomes = new JLabel();
 			Welcomes.setText(Userarraylist.get(z).getFirstName() + "'s" + " Previous Transaction Since Last Login " + Time);
@@ -644,7 +644,7 @@ public class ATMGUI implements ActionListener {
 			Welcomes.setForeground(Color.RED);
 			Welcomes.setBounds(55,55,500,45);
 			TransactionHistoryScreen.add(Welcomes);
-			Bankmethods.ReturnToMainPage(frame, UserOptionsScreen,TransactionHistoryScreen ,25,185, 145, 45);
+			Bankmethods.returnToMainPage(frame, UserOptionsScreen,TransactionHistoryScreen ,25,185, 145, 45);
 			
 			if( transactions.isEmpty()) {
 				JLabel None = new JLabel();
@@ -704,7 +704,7 @@ public class ATMGUI implements ActionListener {
 
 	            	panel.revalidate();
 	            	panel.repaint();
-	            	ClearScreen(panel);
+	            	clearScreen(panel);
 	            	passwordText.setText(""); // Sets Login Screen TextFields Back to blank
 	            	userText.setText("");// Sets Login Screen TextFields Back to blank
 	            	GUI();
@@ -749,7 +749,7 @@ public class ATMGUI implements ActionListener {
 		 * This method should also have some stuff like to take in UserName and Password 
 		 */
 		JPanel CustomerSignup = new JPanel(); // This Created Panel for GUI
-		ClearScreen(CustomerSignup);
+		clearScreen(CustomerSignup);
 		CustomerSignup.setBackground(Color.WHITE); // Consider removing and going back to original color?
      	frame.setSize(430,520); // This set a new size for 
 
@@ -919,7 +919,7 @@ public class ATMGUI implements ActionListener {
 
 	            // Successful Account Creation Panel
 	            JPanel SuccessfulAccountCreation = new JPanel();
-	            ClearScreen(SuccessfulAccountCreation);
+	            clearScreen(SuccessfulAccountCreation);
 	            SuccessfulAccountCreation.setBackground(Color.WHITE);
 	            frame.setSize(800,350); 
 
@@ -967,7 +967,7 @@ public class ATMGUI implements ActionListener {
 					@Override
 				public void actionPerformed(ActionEvent e) { // Calls GUI Method Bringing User Back to Main Screen
 				// TODO Auto-generated method stub
-				ClearScreen(panel);
+				clearScreen(panel);
 				GUI(); 
 					}
 	        		

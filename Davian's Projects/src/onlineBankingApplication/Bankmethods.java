@@ -37,7 +37,7 @@ public class Bankmethods{
 	}
 
 								// Frame 		// UserScreenMenu   // CheckBalance Screen or whatever Screen Engineering 
-	public static void ReturnToMainPage (JFrame frames,JPanel Addin, JPanel Panels, int a, int b, int c, int d) {
+	public static void returnToMainPage (JFrame frames,JPanel Addin, JPanel Panels, int a, int b, int c, int d) {
 		// Method Returns User To The User Options Screen
 		JButton GoBack = new JButton (" < Go Back "); // Creates Button
 		GoBack.setForeground(Color.BLUE);
@@ -50,9 +50,9 @@ public class Bankmethods{
 			@Override
 			public void actionPerformed(ActionEvent e) { //clears screen and brings User to UserOptionScreen
 				// TODO Auto-generated method stub
-				ATMGUI.ClearScreen(Addin);
+				ATMGUI.clearScreen(Addin);
 				frames.setSize(900,500);
-				ATMGUI.BankLogoMethod(Addin,200,20,500,45);
+				ATMGUI.bankLogoMethod(Addin,200,20,500,45);
 			}
 			});
 	}
@@ -73,10 +73,10 @@ JOptionPane.showMessageDialog(frames, Success
 	}
 
 
-public static void TransferReceipt(JFrame frames,  JPanel Option, String Name, String Bank, String RoutingNumber, double Amount, String Account) {
+public static void transferReceipt(JFrame frames,  JPanel Option, String Name, String Bank, String RoutingNumber, double Amount, String Account) {
 	
 	JPanel Receipt = new JPanel();
-	ATMGUI.ClearScreen(Receipt);
+	ATMGUI.clearScreen(Receipt);
 	frames.setSize(500,330); // 340
 	JLabel SuccessfulTrans = new JLabel("<html>ONE AMERICA BANK SUCCESSFUL TRANSFER RECEIPT<br/> -----------------------------------------------"
 			+ " </html>", SwingConstants.CENTER);
@@ -124,7 +124,7 @@ public static void TransferReceipt(JFrame frames,  JPanel Option, String Name, S
 	 UserTimeStamp.setText("" + ATMGUI.Time);
 	 Receipt.add( UserTimeStamp); 
 	
-	 ReturnToMainPage(ATMGUI.frame,Option, Receipt, 5, 250 ,145, 45);
+	 returnToMainPage(ATMGUI.frame,Option, Receipt, 5, 250 ,145, 45);
 
 	
 }
