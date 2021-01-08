@@ -1,33 +1,15 @@
 package onlineBankingApplication;
 
 
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import javax.swing.UIManager;
-import javax.swing.border.Border;
-import javax.swing.border.EtchedBorder;
+import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Point;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
 
 public class ATMGUI implements ActionListener {
 	private static ArrayList<ATMUser> Userarraylist = new ArrayList<ATMUser>(); 
@@ -192,7 +174,6 @@ public class ATMGUI implements ActionListener {
 					WithDrawAmount.setForeground(Color.RED);
 					WithdrawScreen.add(WithDrawAmount);
 
-					
 					JTextField WithDrawinput = new JTextField(); // Takes in User input 
 					WithDrawinput.setBorder(new LineBorder(Color.black,1));
 					WithDrawinput.setBounds(265,92,165,25);
@@ -266,9 +247,7 @@ public class ATMGUI implements ActionListener {
 						
 						 Error.setForeground(Color.RED);
 						Error.setFont(new Font("Open Sans", Font.ITALIC, 14));
-						JOptionPane.showMessageDialog(frame, Error, " One America Bank ", JOptionPane.DEFAULT_OPTION);
-	
-							 
+						JOptionPane.showMessageDialog(frame, Error, " One America Bank ", JOptionPane.DEFAULT_OPTION); 
 						 }
 
 					 }
@@ -566,9 +545,7 @@ public class ATMGUI implements ActionListener {
 					}
 					
 				});
-				 
-				 
-		
+
 				}
 
 			});
@@ -676,8 +653,7 @@ public class ATMGUI implements ActionListener {
 				trans.setBounds(75,135,500,45);
 				trans.setFont(new Font(" monaco ", Font.BOLD,12));
 				TransactionHistoryScreen.add(trans);
-				
-				
+
 			}
 
 				}
@@ -902,7 +878,7 @@ public class ATMGUI implements ActionListener {
 	           }
 	            	
 	            }
-	            
+	     
 	   double InitialDepositminimumvalue = 0;
 	   if (UserConfirmEmailAddress.matches(UserEmailAddress) && UserConfirmEmailAddress.contains("@") &&
 	       UserConfirmEmailAddress.contains (".com") && UserInitialDeposit > InitialDepositminimumvalue && UserPhonenumber.length() >= 10 
