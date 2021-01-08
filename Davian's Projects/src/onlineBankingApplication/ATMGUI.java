@@ -1,6 +1,5 @@
 package onlineBankingApplication;
 
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
@@ -24,7 +23,7 @@ public class ATMGUI implements ActionListener {
     static JLabel WrongInfo = new JLabel();
    public static JButton LoginButton = new JButton(" Login ");
   public static JButton NoAccountButton = new JButton("No Account? Create One Here");
-	public static ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+	private static ArrayList<Transaction> transactions = new ArrayList<Transaction>();
 	public static void main(String[]args) {
 	Userarraylist.add(new ATMUser("Admin", "Account", "OABSystemAdmin", "4356789", "5467", "OneAmericaBankAdmin@OAB.com",
 			"12 One America Bank Way, Orlano, Florida 32789", "1-800-800-9000", 100000.00)); 
