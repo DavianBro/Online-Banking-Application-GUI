@@ -1,26 +1,11 @@
 package onlineBankingApplication;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import java.text.*;
 import java.util.Locale;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import javax.swing.UIManager;
 
 
@@ -31,7 +16,7 @@ public class Bankmethods{
 	
 	public static String Formatter(double Account) { // This Method formats the Output 
 		
-		DecimalFormat Formatters = new DecimalFormat("$ #,###.00"); // This Formats Output  w/ Formua
+		DecimalFormat Formatters = new DecimalFormat("$ #,###.00"); // This Formats Output  w/ Formula
 		Formatters.format(Account); // Formats input 
 		return Formatters.format(Account);
 	}
