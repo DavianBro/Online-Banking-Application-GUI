@@ -8,7 +8,6 @@ import java.util.Locale;
 import javax.swing.*;
 import javax.swing.UIManager;
 
-
 public class Bankmethods{
 	
 	public static String [] options = { "Savings ", "Checkings" };
