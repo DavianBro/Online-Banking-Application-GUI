@@ -840,7 +840,19 @@ public class ATMGUI implements ActionListener {
 		GoBack1.setForeground(Color.BLUE);
 		GoBack1.setBounds(5, 445,  145, 45);
 		GoBack1.setFont(new Font("Open Sans", Font.BOLD,15));
-		CustomerSignup.add(GoBack1);     // Adds Button
+		CustomerSignup.add(GoBack1);  // Adds Button
+		GoBack1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				clearScreen(panel);
+				panel.revalidate();
+            	panel.repaint();
+				GUI(); 
+			}
+				
+		});
 		
 		SubmitApplicationButton.addActionListener(new ActionListener() {
 
